@@ -41,7 +41,7 @@ const walls = [
 World.add(world, walls)
 
 //Random Shapes
-for (let i = 0; i < Math.floor(height / 30); i++) {
+for (let i = 0; i < Math.floor(height / 10); i++) {
 	if (Math.random() < 0.2) {
 		World.add(
 			world,
