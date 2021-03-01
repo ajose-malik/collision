@@ -13,7 +13,8 @@ const render = Render.create({
 	options: {
 		wireframes: false,
 		width,
-		height
+		height,
+		background: "#fefbf5"
 	}
 })
 Render.run(render)
@@ -31,8 +32,14 @@ const walls = [
 	Bodies.rectangle(width - width / 1.5, height, width / 1.2, 1, {
 		isStatic: true
 	}), //ground
-	Bodies.rectangle(width / 1.5, height / 3, width / 4, 40, { isStatic: true }),
-	Bodies.rectangle(width / 3, height / 1.5, width / 6, 40, { isStatic: true }),
+	Bodies.rectangle(width / 1.5, height / 3, width / 4, 40, {
+		isStatic: true,
+		render: { fillStyle: "#eee" }
+	}),
+	Bodies.rectangle(width / 3, height / 1.5, width / 6, 40, {
+		isStatic: true,
+		render: { fillStyle: "#eee" }
+	}),
 	// Bodies.rectangle(200, height / 6, width / 6, 100, { isStatic: true }),
 	Bodies.rectangle(0, height / 2, 1, height, { isStatic: true }), // Left wall
 	Bodies.rectangle(width, height / 2, 1, height, { isStatic: true }) //Right wall
